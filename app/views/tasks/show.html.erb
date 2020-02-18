@@ -1,13 +1,26 @@
-<h1>Task</h1>
 
-<%= link_to "Edit this task", edit_task_path, {:class=>"edit_btn"} %>
+<div class="container">
+  <h1>Task</h1>
+  <div id="edit_task_btn">
+    <%= link_to "Edit this task", edit_task_path, {:class=>"edit_btn"} %>
+  </div>
 
-<p id="task_details"><%= @task.details %></p>
+  <p style="background-color: lightgrey;"id="task_details"><%= @task.details %></p>
 
-<% if @task.completed == false %>
-  <p style="border-bottom: 1px solid; lightgrey;"><%= "This task is not completed yet" %></p>
-  <% else %>
-  <p style="border-bottom: 1px solid lightgrey;"><%= "This task is completed" %></p>
-<% end %>
+  <% if @task.completed == false %>
+    <div class="task_info">
+      <input type="checkbox">
+      <p><%= "This task is not completed yet" %></p>
+    </div>
+    <% else %>
+    <div class="task_info">
+      <input type="checkbox" checked>
+      <p><%= "This task is completed" %></p>
+    </div>
+  <% end %>
 
-<%= link_to "Back to tasks", tasks_path %>
+  <hr>
+
+  <img id="back" src="https://image.flaticon.com/icons/png/512/0/340.png">
+  <%= link_to "Back to tasks list", tasks_path, {:class=>"back_tasks"} %>
+</div>
