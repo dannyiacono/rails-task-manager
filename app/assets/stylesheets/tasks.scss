@@ -12,3 +12,44 @@
   border-radius: 4px;
   padding: 15px;
 }
+
+.new_btn, .edit_btn {
+  background-color: lightblue;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.new_btn:hover, .edit_btn:hover {
+  background-color: blue;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.edit_task {
+  margin: 10px auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  font-weight: bold;
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
+}
+
+#task_title {
+  padding: 10px;
+}
+
+hr {
+  margin-bottom: 30px;
+}
