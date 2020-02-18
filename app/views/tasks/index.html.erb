@@ -4,7 +4,17 @@
 
   <div class="tasks">
     <% @tasks.each do |task| %>
-      <p><%= task.completed ? "[X]" : "[ ]" %> <%= link_to task.title, task_path(task) %> <%= link_to image_tag("https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Trash_Can-512.png"), delete_path(task), method: :delete %></p>
+      <% if task.completed == false %>
+      <div class="task_info">
+        <input type="checkbox">
+        <p><%= link_to task.title, task_path(task) %> <%= link_to image_tag("https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Trash_Can-512.png"), delete_path(task), method: :delete %></p>
+      </div>
+      <% else %>
+      <div class="task_info">
+        <input type="checkbox" checked>
+        <p><%= link_to task.title, task_path(task) %> <%= link_to image_tag("https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Trash_Can-512.png"), delete_path(task), method: :delete %></p>
+      </div>
+    <% end %>
     <% end %>
   </div>
 
