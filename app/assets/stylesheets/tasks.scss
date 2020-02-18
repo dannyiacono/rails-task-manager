@@ -11,18 +11,20 @@
   background-color: lightgrey;
   border-radius: 4px;
   padding: 15px;
+  margin-top: 30px;
 }
 
 .new_btn, .edit_btn {
-  background-color: lightblue;
+  background-color: blue;
   padding: 15px;
   text-decoration: none;
   border-radius: 4px;
   color: white;
+  margin-bottom: 30px;
 }
 
 .new_btn:hover, .edit_btn:hover {
-  background-color: blue;
+  background-color: lightblue;
 }
 
 body {
