@@ -5,7 +5,7 @@
     <%= link_to "Edit this task", edit_task_path, {:class=>"edit_btn"} %>
   </div>
 
-  <p style="background-color: lightgrey;"id="task_details"><%= @task.details %></p>
+  <p style="background-color: lightgrey; padding: 20px;" id="task_details"><%= @task.details %></p>
 
   <% if @task.completed == false %>
     <div class="task_info">
