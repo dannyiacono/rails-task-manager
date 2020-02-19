@@ -3,7 +3,9 @@
   <%= f.text_field :title %>
   <%= f.label :details %>
   <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.check_box :completed, :class => "chckbx_form"%>
+  <div>
+    <%= f.label :completed %>
+    <%= f.check_box :completed, :class => "chckbx_form"%>
+  </div>
   <%= f.submit :class => "submit"%>
 <% end %>
