@@ -14,3 +14,12 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+const displayAlertOnDelete = () => {
+  const button = document.getElementbyId("del_btn");
+  button.addEventListener("click", (event) => {
+    console.log(event);
+    alert("Sure you want to delete?")
+  });
+};
+
+displayAlertOnDelete();
